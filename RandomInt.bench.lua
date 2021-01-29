@@ -16,9 +16,7 @@ local NextInteger = RandomLib.NextInteger
 
 local LengthPlusOne = N + 1
 return {
-	ParameterGenerator = function()
-		return 1000
-	end;
+	ParameterGenerator = function() end;
 
 	Functions = {
 		["Random:NextInteger"] = function(Profiler)
