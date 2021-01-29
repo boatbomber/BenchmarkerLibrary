@@ -42,6 +42,21 @@ return {
 			end
 			Profiler.End()
 		end;
+
+		["length"] = function(Profiler, RandomNumber)
+			Profiler.Begin("Table Init")
+			local t = {}
+			Profiler.End()
+
+			local Length = 0
+
+			Profiler.Begin("Insertion Loop")
+			for i=1,N do
+				Length += 1
+				t[Length] = RandomNumber
+			end
+			Profiler.End()
+		end;
 	};
 
 }
