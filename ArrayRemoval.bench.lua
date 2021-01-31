@@ -16,13 +16,6 @@ https://devforum.roblox.com/t/benchmarker-plugin-compare-function-speeds-with-gr
 
 local N = 5000
 
-
-local function FastRemove(Array, Index)
-	local Length = #Array
-	Array[Index] = Array[Length]
-	Array[Length] = nil
-end
-
 return {
 	ParameterGenerator = function()
 		local Length = math.random(N*0.7,N*1.3)
