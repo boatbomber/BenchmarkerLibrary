@@ -53,7 +53,9 @@ local Index = {
 
 -- Validate index
 for _, module in script.Parent:GetChildren() do
-	if (module == script) or (not module:IsA("ModuleScript")) then continue end
+	if (module == script) or (not module:IsA("ModuleScript")) then
+		continue
+	end
 	if Index[module.Name] == nil then
 		warn("BenchmarkerLibrary module '" .. module.Name .. "' is missing an entry in the index")
 	end
