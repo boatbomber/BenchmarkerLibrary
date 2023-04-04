@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  ci:
+  Code-Quality:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,10 +20,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: 'v0.2.7'
 
-      - name: StyLua
+      - name: Format
         shell: bash
         run: stylua src --check
 
-      - name: Selene
+      - name: Lint
         shell: bash
         run: selene src
