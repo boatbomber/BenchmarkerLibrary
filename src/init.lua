@@ -52,7 +52,7 @@ local Index = {
 }
 
 -- Add GetModule functions to the index
-for _, module in script.Parent:GetChildren() do
+for _, module in script:GetChildren() do
 	-- Skip non-ModuleScript children
 	if not module:IsA("ModuleScript") then
 		continue
