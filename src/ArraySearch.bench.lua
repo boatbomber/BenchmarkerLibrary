@@ -44,13 +44,13 @@ return {
 	Functions = {
 		["binary search"] = function(Profiler, Array, Index)
 			for i = 1, 100 do
-				BinarySearch(Array, Index)
+				local idx = BinarySearch(Array, Index)
 			end
 		end,
 
 		["table.find"] = function(Profiler, Array, Index)
 			for i = 1, 100 do
-				table.find(Array, Index)
+				local idx = table.find(Array, Index)
 			end
 		end,
 	},

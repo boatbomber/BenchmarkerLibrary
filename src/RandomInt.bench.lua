@@ -22,25 +22,25 @@ return {
 	Functions = {
 		["Random:NextInteger"] = function(Profiler)
 			for Index = 1, N do
-				RandomObj:NextInteger(Index, LengthPlusOne)
+				local int = RandomObj:NextInteger(Index, LengthPlusOne)
 			end
 		end,
 
 		["local NextInteger"] = function(Profiler)
 			for Index = 1, N do
-				NextInteger(RandomObj, Index, LengthPlusOne)
+				local int = NextInteger(RandomObj, Index, LengthPlusOne)
 			end
 		end,
 
 		["math.random"] = function(Profiler)
 			for Index = 1, N do
-				math.random(Index, LengthPlusOne)
+				local int = math.random(Index, LengthPlusOne)
 			end
 		end,
 
 		["local math.random"] = function(Profiler)
 			for Index = 1, N do
-				LocalMathRandom(Index, LengthPlusOne)
+				local int = LocalMathRandom(Index, LengthPlusOne)
 			end
 		end,
 	},
