@@ -51,13 +51,22 @@ local Index = {
 	},
 }
 
--- Validate index
+-- Add GetModule functions to the index
 for _, module in script.Parent:GetChildren() do
-	if (module == script) or (not module:IsA("ModuleScript")) then
+	-- Skip non-ModuleScript children
+	if not module:IsA("ModuleScript") then
 		continue
 	end
+
+	-- Validate index
 	if Index[module.Name] == nil then
 		warn("BenchmarkerLibrary module '" .. module.Name .. "' is missing an entry in the index")
+		continue
+	end
+
+	-- Add GetModule function for ease of use
+	Index[module.Name].GetModule = function()
+		return module:Clone()
 	end
 end
 
