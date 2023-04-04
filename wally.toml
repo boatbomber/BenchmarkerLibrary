@@ -1,0 +1,10 @@
+[package]
+name = "boatbomber/benchmarkerlibrary"
+description = "Collection of benchmark templates and examples for Benchmarker"
+version = "0.1.0"
+license = "MIT"
+authors = ["boatbomber (https://boatbomber.com)"]
+registry = "https://github.com/upliftgames/wally-index"
+realm = "shared"
+include = ["src", "src/**", "wally.toml", "wally.lock", "default.project.json"]
+exclude = ["**"]

@@ -1,0 +1,7 @@
+{
+	"name": "Library",
+	"tree": {
+		"$className": "Folder",
+		"$path": "src"
+	}
+}
