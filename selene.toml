@@ -1,1 +1,4 @@
 std = "roblox"
+
+[lints]
+unused_variable = "allow" # Templates provide nice variables for users to tinker with
