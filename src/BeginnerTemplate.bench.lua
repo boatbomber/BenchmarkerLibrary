@@ -16,6 +16,15 @@ return {
 		return math.random(1000) / 10
 	end,
 
+	-- This is called once, before running all your functions
+	BeforeAll = function() end,
+	-- This is called once, after running all your functions
+	AfterAll = function() end,
+	-- This is called right before your function, each time the function is called
+	BeforeEach = function() end,
+	-- This is called right after your function, each time the function is called
+	AfterEach = function() end,
+
 	Functions = {
 		["Function A"] = function(Profiler, RandomNumber) -- You can change "Function A" to a descriptive name for your function
 

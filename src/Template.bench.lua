@@ -9,6 +9,11 @@ return {
 		return
 	end,
 
+	BeforeAll = function() end,
+	AfterAll = function() end,
+	BeforeEach = function() end,
+	AfterEach = function() end,
+
 	Functions = {
 		["A"] = function(Profiler) end,
 
