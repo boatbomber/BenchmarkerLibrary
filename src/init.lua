@@ -60,7 +60,12 @@ for _, module in script:GetChildren() do
 
 	-- Validate index
 	if Index[module.Name] == nil then
-		warn("BenchmarkerLibrary module '" .. module.Name .. "' is missing an entry in the index")
+		warn("BenchmarkerLibrary module '" .. module.Name .. "' is missing an entry in the library index")
+		Index[module.Name] = {
+			LayoutOrder = math.huge,
+			Description = "No description provided",
+			RunOnInsert = false,
+		}
 		continue
 	end
 
